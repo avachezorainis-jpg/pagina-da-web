@@ -25,14 +25,19 @@
     </main>
 </body>
 </html>
-27  <h1>Meu Blog tech</h1>
-28  <p>vou compartilhar conhecimentos sobre tecnologia e programação</p>
-29  </header>
-30  <main>
-31  <img src="Gemini_Generated_Image_qn40sfqn40sfqn40 (1).png" alt="">
-32  <h2>meu primeiro post</h2>
-33  <p>Por: Avache zorainis</p>
-34  <p>Boas-vindas ao meu blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
-35  </main>
+  <h1>Meu Blog tech</h1>
+  <p>vou compartilhar conhecimentos sobre tecnologia e programação</p>
+  </header>
+<main>
+    <img src="Gemini_Generated_Image_qn40sfqn40sfqn40 (1).png" alt="">
+    <h2>meu primeiro post</h2>
+    <p>Por: Avache zorainis</p>
+    <p>Boas-vindas ao meu blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+    <button>❤️ <span>0</span></button>
+    <button>❤️ <span>0</span></button>
+</main>
+</div>
+</article>
+</main>
 36  
 37  </body>
