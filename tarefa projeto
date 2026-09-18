@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Habilidades Web e Pensamento Crítico</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1>Web & Impacto Social</h1>
+
+            <button id="menuBtn" aria-label="Abrir menu">
+                ☰
+            </button>
+
+            <ul id="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#aprendizado">O que vamos aprender?</a></li>
+                <li><a href="#projeto">Projeto</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="hero">
+            <div>
+                <h2>Criação Web e Pensamento Crítico</h2>
+
+                <p>
+                    Aprenda a construir projetos digitais interativos,
+                    acessíveis e colaborativos, usando tecnologia para
+                    solucionar problemas reais.
+                </p>
+
+                <a href="#aprendizado" class="botao">
+                    Começar
+                </a>
+            </div>
+        </section>
+
+        <section id="aprendizado" class="section">
+            <h2>O que vamos aprender?</h2>
+
+            <div class="cards">
+
+                <article class="card">
+                    <span>💻</span>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>
+                        Estruturar páginas com HTML, estilizar com CSS
+                        e criar layouts responsivos utilizando Flexbox.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span>⚡</span>
+                    <h3>Interatividade com JavaScript</h3>
+                    <p>
+                        Manipular o DOM e desenvolver funcionalidades
+                        dinâmicas para tornar as páginas mais interativas.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span>♿</span>
+                    <h3>UX e Ética Digital</h3>
+                    <p>
+                        Aplicar princípios de acessibilidade, experiência
+                        do usuário e produção responsável de conteúdo.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span>🤖</span>
+                    <h3>IA e Colaboração</h3>
+                    <p>
+                        Planejar, prototipar e validar soluções para
+                        problemas reais utilizando inteligência artificial
+                        como ferramenta de apoio.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="projeto" class="section projeto">
+            <h2>Nosso projeto</h2>
+
+            <p>
+                O objetivo é criar uma solução digital que ajude a
+                comunidade em algum problema real.
+            </p>
+
+            <div class="passos">
+
+                <div>
+                    <strong>1</strong>
+                    <h3>Identificar</h3>
+                    <p>Encontrar um problema que precisa de solução.</p>
+                </div>
+
+                <div>
+                    <strong>2</strong>
+                    <h3>Planejar</h3>
+                    <p>Pensar em ideias e definir os objetivos.</p>
+                </div>
+
+                <div>
+                    <strong>3</strong>
+                    <h3>Prototipar</h3>
+                    <p>Criar uma primeira versão da solução.</p>
+                </div>
+
+                <div>
+                    <strong>4</strong>
+                    <h3>Validar</h3>
+                    <p>Testar, receber opiniões e melhorar o projeto.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="quiz" class="section quiz">
+            <h2>Teste seus conhecimentos</h2>
+
+            <p>
+                Qual tecnologia é usada principalmente para adicionar
+                interatividade às páginas web?
+            </p>
+
+            <div class="opcoes">
+                <button class="opcao" data-correta="false">HTML</button>
+                <button class="opcao" data-correta="false">CSS</button>
+                <button class="opcao" data-correta="true">JavaScript</button>
+                <button class="opcao" data-correta="false">Flexbox</button>
+            </div>
+
+            <p id="resultado"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Projeto educacional — Criação Web, Pensamento Crítico e Impacto Social.
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
