@@ -158,3 +158,327 @@
 
 </body>
 </html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #f5f7fb;
+}
+
+/* NAVBAR */
+
+header {
+    background: #151b2e;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar h1 {
+    font-size: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+#menuBtn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 80vh;
+    padding: 80px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #283593,
+        #5c6bc0
+    );
+
+    color: white;
+}
+
+.hero div {
+    max-width: 750px;
+}
+
+.hero h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 12px 25px;
+
+    background: white;
+    color: #283593;
+
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao:hover {
+    transform: scale(1.05);
+}
+
+/* SEÇÕES */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.section > h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+/* CARDS */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+
+    width: 250px;
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card span {
+    font-size: 35px;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+}
+
+/* PROJETO */
+
+.projeto {
+    text-align: center;
+}
+
+.passos {
+    margin-top: 40px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.passos div {
+    background: white;
+    width: 220px;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.passos strong {
+    display: inline-flex;
+
+    width: 45px;
+    height: 45px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #283593;
+    color: white;
+
+    font-size: 20px;
+}
+
+/* QUIZ */
+
+.quiz {
+    text-align: center;
+}
+
+.opcoes {
+    margin-top: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.opcao {
+    padding: 12px 25px;
+
+    border: 2px solid #283593;
+    border-radius: 8px;
+
+    background: white;
+    color: #283593;
+
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.opcao:hover {
+    background: #283593;
+    color: white;
+}
+
+#resultado {
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 25px;
+    text-align: center;
+
+    background: #151b2e;
+    color: white;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+    #menuBtn {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+
+        position: absolute;
+        top: 60px;
+        left: 0;
+
+        width: 100%;
+
+        background: #151b2e;
+
+        padding: 20px;
+        text-align: center;
+    }
+
+    .navbar ul.ativo {
+        display: flex;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .passos div {
+        width: 100%;
+    }
+// MENU MOBILE
+
+const menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
+
+menuBtn.addEventListener("click", function () {
+    menu.classList.toggle("ativo");
+});
+
+
+// QUIZ
+
+const opcoes = document.querySelectorAll(".opcao");
+const resultado = document.getElementById("resultado");
+
+opcoes.forEach(function (opcao) {
+
+    opcao.addEventListener("click", function () {
+
+        const correta = opcao.dataset.correta;
+
+        if (correta === "true") {
+            resultado.textContent = "Resposta correta! 🎉";
+        } else {
+            resultado.textContent = "Resposta incorreta. Tente novamente!";
+        }
+
+    });
+
+});
